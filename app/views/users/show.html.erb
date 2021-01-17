@@ -1,0 +1,12 @@
+<%= session[:message] if session[:message] %>
+
+
+
+<h1><%= current_user.name %></h1>
+<ul>
+  <%= "ADMIN" if current_user.admin %>
+  <li>Mood: <%= current_user.mood %></li>
+  <li>Tickets: <%= current_user.tickets %></li>
+  <li>Height: <%= current_user.height %> inches</li>
+  <%= link_to "See attractions", attractions_path %>
+</ul>
